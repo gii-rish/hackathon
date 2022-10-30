@@ -34,4 +34,8 @@ export class LandingPageComponent implements OnInit {
     }
   }
 
+  navigate() {
+    this.router.navigate(['/list'])
+  }
+
 }

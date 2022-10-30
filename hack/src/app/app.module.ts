@@ -11,6 +11,11 @@ import { CarouselModule } from 'ng-carousel-cdk';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { ListingPageComponent } from './listing-page/listing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MyBookingsComponent } from './my-bookings/my-bookings.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { TaxiComponent } from './taxi/taxi.component';
+import { FlightsComponent } from './flights/flights.component';
+import { BiddingComponent } from './bidding/bidding.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     LandingPageComponent,
     DetailsPageComponent,
     ListingPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    MyBookingsComponent,
+    HotelsComponent,
+    TaxiComponent,
+    FlightsComponent,
+    BiddingComponent
   ],
   imports: [
     BrowserModule,

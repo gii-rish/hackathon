@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 export class ListingPageComponent implements OnInit {
 
   listItem: any;
+  color = 'red';
+  color1 = 'red';
+  color2 = 'red';
 
   constructor(private router: Router) {
     this.listItem = [
@@ -42,7 +45,7 @@ export class ListingPageComponent implements OnInit {
   }
 
   cancel(){
-    this.router.navigate(['/detailsPage'])
+    this.router.navigate(['/flights'])
   }
 
 }

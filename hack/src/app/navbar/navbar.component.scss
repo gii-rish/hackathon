@@ -7,18 +7,20 @@
     font-size: large;
     font-weight: bolder;
     padding: 20px;
-    height: 70px;
+    height: 90px;
     display: flex;
-    background-color: #b6b6b6;
+    background-color: #000;
     justify-content: space-between;
     align-items: center;
 
     .flex-items {
         display: block;
+        color: #fff;
 
         .anchors {
             margin: 20px;
             display: inline-block;
+            cursor: pointer;
         }
     }
 }

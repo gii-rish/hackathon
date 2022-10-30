@@ -1,97 +1,79 @@
 <app-navbar></app-navbar>
+<div style="background-color: #F4FDF9; height: 100%;" >
 <div style="background-image: url('../../assets/images/map3.png');width: 90%;margin: 0 auto;">
 
     <!-- <div class="d-flex w-100 justify-content-center">
       <button type="button" class="btn btn-secondary m-2">Personal</button>
       <button type="button" class="btn btn-secondary m-2">Business</button>
     </div> -->
-
-<div class="search-container">    
+<h2 class="h2-one">
+    <b style="font-size:larger;">Hey, JOHN DOE</b>!
+</h2>
+<div class="search-container">
+    
     <input type="text" class="input-field" name="x" id="search" [(ngModel)]="searchString" placeholder="Where would you like to go?">
     <button class="search" (click)="search()">Search</button>
   </div>
 </div>
 
-<div class="img-container">
+<div class="img-container">    
+    <h3>
+         Specially Crafted Packages for <b style="font-size:larger;">YOU!</b>
+    </h3>
+    <div class="flex-items">
+        <img class="image" src='../../assets/images/aus2.png' alt="Random image" (click)="navigate()" style="width: 326px; height: 400px; cursor: pointer;">
+        <img class="image" src='../../assets/images/aus1.png' alt="Random image" style="width: 326px; height: 400px; cursor: pointer;">
+        <img class="image" src='../../assets/images/aus3.png' alt="Random image" style="width: 324px; height: 400px; cursor: pointer;">
+        <img class="image" src='../../assets/images/aus4.png' alt="Random image" style="width: 324px; height: 400px; cursor: pointer;">
+    </div>
+</div>
+
+<!-- <div class="img-container">
     <h2 class="h2-one">
-        Specially Crafted for <b>YOU!</b>.
+        Asian and Eurasia
     </h2>
     <div class="flex-items">        
-        <img class="image" src='../../assets/images/maldives.png' alt="Random image" style="width: 326px; height: 400px;">        
-        <img class="image" src='../../assets/images/vietnanm.png' alt="Random image" style="width: 326px; height: 400px;">
-        <img class="image" src='../../assets/images/Thailand.png' alt="Random image" style="width: 324px; height: 400px;">
+        <img class="image" src='../../assets/images/maldives.png' alt="Random image" style="width: 326px; height: 400px; cursor: pointer;">        
+        <img class="image" src='../../assets/images/vietnanm.png' alt="Random image" style="width: 326px; height: 400px; cursor: pointer;">
+        <img class="image" src='../../assets/images/Thailand.png' alt="Random image" style="width: 324px; height: 400px; cursor: pointer;">
         <img class="image" src='../../assets/images/Bali.png' alt="Random image" style="width: 324px; height: 400px;">
     </div>
-</div>
-
-<div class="img-container">
-    <h2 class="h2-one">
-        Europe and Oceania.
-    </h2>
-    <div class="flex-items">        
-        <img class="image" src='../../assets/images/aus1.png' alt="Random image" style="width: 326px; height: 400px;">        
-        <img class="image" src='../../assets/images/aus2.png' alt="Random image" style="width: 326px; height: 400px;">
-        <img class="image" src='../../assets/images/aus3.png' alt="Random image" style="width: 324px; height: 400px;">
-        <img class="image" src='../../assets/images/aus4.png' alt="Random image" style="width: 324px; height: 400px;">
-    </div>
-</div>
-
-<!-- 
-<div style="margin:10px;">
-    <div class="roww">
-        <h1>Budget Friendly Packages</h1>
-    </div>
-    <div class="row">
-            <ngb-carousel>
-                <ng-template ngbSlide>
-                    <div class="wrapper">
-                    <img class="image" src='../../assets/images/cr-1.jpg' alt="Random slide">
-                    </div>
-                    <div class="carousel-caption">
-                    <h3>First Slide</h3>
-                    <p> Angular 13 Carousel Example </p>
-                    </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                    <div class="wrapper">
-                    <img class="image" src="../../assets/images/cr-2.jpg" alt="Random second slide">
-                    </div>
-                    <div class="carousel-caption">
-                    <h3>Second Slide</h3>
-                    <p> Check out Techiediaries</p>
-                    </div>
-                </ng-template>
-            </ngb-carousel>
-        
+</div> -->
+<div class="deals-container">
+    <h3>
+         BEST DEALS
+    </h3>
+    <p>Best deals of the season.</p>
+    <div class="deals-card">
+        <img class="image" src='../../assets/images/maldives.png' alt="Random image" style="width: 100px; height: 98px; cursor: pointer; border-radius: 10px;">
+        <div style="flex: 2; margin-left:30px">
+            <p>Redwood Forest</p>
+            <i class="bi bi-geo-alt-fill"></i>
+            <span style="font-size: large; margin-left: 5px;">California</span>
         </div>
-        <div style="margin:10px;">
-    <div class="roww">
-        <h1>Places similar to your last visit.</h1>
-    </div>
-        <div class="row">
-            <ngb-carousel>
-                <ng-template ngbSlide>
-                    <div class="carousel-caption">
-                        <h3>First Slide</h3>
-                        <p> Angular 13 Carousel Example </p>
-                    </div>
-                    <div class="wrapper">
-                        <img class="image" src='../../assets/images/cr-3.jpg' alt="Random slide">
-                    </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                    <div class="carousel-caption">
-                        <h3>Second Slide</h3>
-                        <p> Check out Techiediaries</p>
-                    </div>
-                    <div class="wrapper">
-                        <img class="image" src="../../assets/images/cr-4.jpg" alt="Random second slide">
-                    </div>
-                </ng-template>
-            </ngb-carousel>
+        <div style="margin-top: 20px">
+            <i class="bi bi-currency-rupee" style="font-size: 20px;"></i>
+            <span style="font-weight: 500; font-size:larger;">5000</span>
         </div>
-        <div style="margin:10px;">
+    </div>
 
-    <div class="roww">
-        <h1>Ever green destinations.</h1>
-    </div> -->
+</div>
+<div class="deals-container">
+    <h3>
+         BEST DEALS
+    </h3>
+    <p>Best deals of the season.</p>
+    <div class="deals-card">
+        <img class="image" src='../../assets/images/maldives.png' alt="Random image" style="width: 100px; height: 98px; cursor: pointer; border-radius: 10px;">
+        <div style="flex: 2; margin-left:30px">
+            <p>Redwood Forest</p>
+            <i class="bi bi-geo-alt-fill"></i>
+            <span style="font-size: large; margin-left: 5px;">California</span>
+        </div>
+        <div style="margin-top: 20px">
+            <i class="bi bi-currency-rupee" style="font-size: 20px;"></i>
+            <span style="font-weight: 500; font-size:larger;">5000</span>
+        </div>
+    </div>
+</div>
+</div>

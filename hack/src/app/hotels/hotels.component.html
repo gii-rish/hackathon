@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div style="background-image: url('../../assets/images/map3.png'); height: 540px;">
+<div class="hotel-container">
+    <div class="item">
+        <i class="bi bi-geo-alt-fill" style="position: absolute; right: 75rem; top: 225px"></i>
+        <input type="text" placeholder="Enter a destination" class="pickup">
+    </div>
+
+    <div class="date-container">
+        <i class="bi bi-box-arrow-in-right" style="position: absolute; top: 294px; left: 300px; font-size: large;" ></i>
+        <input class="check-in-out" type="text" placeholder="Check-in" onfocus="(this.type='date')"/>
+        <div style="border: 1px solid #b6b6b6; width: 215px; background-color: #fff; border-radius: 10px; padding: 10px; color: grey;">
+            <label for="night">Nights</label>
+            <select style="border: none; background-color: inherit;">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <!-- <i class="bi bi-box-arrow-in-left"></i> -->
+        <i class="bi bi-box-arrow-in-left" style="position: absolute; top: 294px; right: 720px; font-size: large;" ></i>
+        <input class="check-in-out" type="text" placeholder="Check-out" onfocus="(this.type='date')"/>
+
+        <div style="border: 1px solid #b6b6b6; width: 215px; background-color: #fff; border-radius: 10px; padding: 10px; color: grey;">
+            <label for="Adults" style="position:relative;">Adults</label>
+            <select style="border: none; background-color: inherit;">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div>
+    <button class="search-btn">Search</button>
+</div>
+</div>
