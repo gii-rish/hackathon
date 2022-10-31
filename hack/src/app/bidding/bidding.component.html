@@ -13,10 +13,10 @@
     </div>
 
     <div class="item">        
-        <input type="text" placeholder="Min Bid" class="pickup" style="width: 460px; position: absolute; top: 240px; left: 280px;">
+        <input type="text" placeholder="Current Bid" class="pickup" style="width: 460px; position: absolute; top: 240px; left: 280px;">
         <i class="bi bi-plus-slash-minus" style="position: absolute; top: 313px; left: 295px; font-size: large;" ></i>
 
-        <input type="text" placeholder="Max Bid" class="pickup" style="width: 460px; position: absolute; top: 240px; right: 295px;">
+        <input type="text" placeholder="My Bid" class="pickup" style="width: 460px; position: absolute; top: 240px; right: 295px;">
         <i class="bi bi-plus-slash-minus" style="position: absolute; top: 312px; right: 725px; font-size: large;"></i>
         
 
@@ -33,6 +33,29 @@
 </div>
 
 <div>
-    <button class="search-btn">Submit</button>
+    <button class="search-btn" (click)="UpdateText()" id="btn-3">Submit</button>
 </div>
+</div>
+
+<div class="heading">
+    <h4>Booked flights.</h4>
+</div>
+
+<div class="f-container">
+    <div class="f-container__flights">
+        <div class="f-container__flights--flight">
+            <i class="bi bi-airplane-engines" style="position: absolute; right: 57rem; top: 50px; font-size: xx-large; color: rgb(67, 67, 67);"></i>
+            <h5 style="position: absolute; left:150px; top: 65px; color: rgb(67, 67, 67);">AL2398</h5>
+            <div style="display: flex; column-gap: 20px; position: relative; left: 300px; top: 30px;">
+                <h4>00.50</h4>
+                <p style="position: absolute; top: 25px; left: 15px; color: grey;">BLR</p>
+                <div style="margin-top:6px; color: grey;">-------------------></div>
+                <h4>13.40</h4>
+                <p style="position: absolute; top: 25px; right: 680px; color: grey;">CDG</p>
+                <div style="position: absolute; top :3px; left: 440px;">
+                    <p>Rs. <span style="font-weight: 700; font-size: x-large">38,558</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

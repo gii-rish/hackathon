@@ -45,3 +45,47 @@
     font-weight: bolder;
     color: #fff;
 }
+
+
+.heading {
+    position: absolute;
+    top: 530px;
+    left: 220px;
+
+    h4 {
+        font-weight: 700;
+        line-height: 20px;
+        color: rgb(67, 67, 67);
+    }
+}
+
+.f-container {
+    position: absolute;
+    // border: 1px solid red;
+    top: 590px;
+    left: 220px;
+    width: 70%;
+    background-color: #EFF3F2;
+    height: 160px;
+    border-radius: 20px;
+    padding: 10px;
+    &__flights {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        row-gap: 5px;
+        &--flight{
+            // font-weight: 500;
+            height: 100px;
+            width: 95%;  
+            margin-left: 25px;
+            margin-top: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+
+            h4{    
+                font-size: x-large;            
+            }
+        }
+    }
+}
