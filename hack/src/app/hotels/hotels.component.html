@@ -1,14 +1,17 @@
 <app-navbar></app-navbar>
 <div style="background-image: url('../../assets/images/map3.png'); height: 540px;">
+<h2>Where would you like to stay?</h2>
     <div class="hotel-container">
         <div class="item">
-            <i class="bi bi-geo-alt-fill" style="position: absolute; right: 75rem; top: 225px"></i>
+            <i class="bi bi-geo-alt-fill" style="position: absolute; left: 4.5rem; top: 75px"></i>
             <input type="text" placeholder="Enter a destination" [(ngModel)]="destination" class="pickup">
         </div>
 
         <div class="date-container">
-            <i class="bi bi-box-arrow-in-right" style="position: absolute; top: 294px; left: 300px; font-size: large;" ></i>
-            <input class="check-in-out" type="text" placeholder="Check-in" [(ngModel)]="checkin" onfocus="(this.type='date')"/>
+            <div style="position: relative;">
+                <i class="bi bi-box-arrow-in-right" style="position: absolute; top: 13px; left: 10px; font-size: large;" ></i>
+                <input class="check-in-out" type="text" placeholder="Check-in" [(ngModel)]="checkin" onfocus="(this.type='date')"/>
+            </div>
 
             <div style="border: 1px solid #b6b6b6; width: 215px; background-color: #fff; border-radius: 10px; padding: 10px; color: grey;">
                 <label for="night">Nights</label>
@@ -20,10 +23,11 @@
                     <option value="4">4</option>
                 </select>
             </div>
-
-            <!-- <i class="bi bi-box-arrow-in-left"></i> -->
-            <i class="bi bi-box-arrow-in-left" style="position: absolute; top: 294px; right: 720px; font-size: large;" ></i>
-            <input class="check-in-out" type="text" placeholder="Check-out" [(ngModel)]="checkout" onfocus="(this.type='date')"/>
+            
+            <div style="position: relative;">
+                <i class="bi bi-box-arrow-in-left" style="position: absolute; top: 15px; left: 10px; font-size: large;" ></i>
+                <input class="check-in-out" type="text" placeholder="Check-out" [(ngModel)]="checkout" onfocus="(this.type='date')"/>
+            </div>
 
             <div style="border: 1px solid #b6b6b6; width: 215px; background-color: #fff; border-radius: 10px; padding: 10px; color: grey;">
                 <label for="Adults" style="position:relative;">Adults</label>
@@ -39,80 +43,49 @@
     </div>
 
     <div>
-        <button class="search-btn" (click)="search()">Search</button>
+        <button class="search-btn" (click)="search()">Search HOTELS</button>
     </div>
 </div>
 
-<div *ngIf="status">
+<div *ngIf="status" class="dynamic-content">
+    <div class="dynamic-content__one">
         <div class="heading">
             <h4>Showing the best hotels</h4>
-            <p>Price per passenger includes tax and fees</p>
+            <p>Price per person includes tax and fees</p>
         </div>
 
-        <div class="f-container">
-            <div class="f-container__flights">
-                <div class="f-container__flights--flight">
-                    <img src="../../assets/images/hotel-1.png" alt="hotel-1" style="width: 250px; height: 150px; border-radius: 10px 0px 0px 10px;">
+        <div class="f-container">            
+            <div  class="f-container__flights" *ngFor="let hotel of hotelList; let i=index">
+                <div class="f-container__flights--item--image">
+                    <img [src]="'../../assets/images/'+hotel.image" alt="hotel-1" style="width: 150px; height: 100px; border-radius: 10px 0px 0px 10px;">
                 </div>
 
-                <div style="display: flex; flex-direction: column; position:absolute; top: 50px; left: 380px;">
+                <div class="f-container__flights--item--middle-pane">
                     <h5>
-                        Hilton Garden New Wing
+                        {{ hotel.name }}
                     </h5>
-                    <div style="display: inline-flex; column-gap: 10px; margin-top: 10px;">
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Breakfast</p>
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Free WiFi</p>
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Convenience store</p>
+                    <div style="display: inline-flex; column-gap: 5px; margin-top: 10px;" class="offering">
+                    <span *ngFor="let x of hotel.offering">
+                        <p style="border: 1px solid rgb(206, 204, 204); border-radius: 10px; color: grey; padding: 3px 5px;">{{ x }}</p>
+                    </span>
                     </div>
-
-                    <div style="position: absolute; left: 400px;">
-                            <p>Rs. <span style="font-weight: 700; font-size: larger">58,506</span></p>
-                            <button style="padding: 10px 40px; border-radius: 5px; border: none; background-color: rgb(49, 160, 224); font-weight: 500; color: #fff; margin-top: 10px;">SELECT</button>
-                        </div>
                 </div>
 
-                <div class="f-container__flights--flight">
-                    <img src="../../assets/images/hotel-2.png" alt="hotel-1" style="width: 250px; height: 150px; border-radius: 10px 0px 0px 10px;">
-                </div>
-
-                <div style="display: flex; flex-direction: column; position:absolute; top: 220px; left: 380px;">
-                    <h5>
-                        Cabana El Condor - Complejo El Taller
-                    </h5>
-                    <div style="display: inline-flex; column-gap: 10px; margin-top: 10px;">
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Breakfast</p>
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Free WiFi</p>
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Free Parking</p>
-                    </div>
-
-                    <div style="position: absolute; left: 400px;">
-                            <p>Rs. <span style="font-weight: 700; font-size: larger">46,068</span></p>
-                            <button style="padding: 10px 40px; border-radius: 5px; border: none; background-color: rgb(49, 160, 224); font-weight: 500; color: #fff; margin-top: 10px;">SELECT</button>
-                        </div>
-                </div>
-
-                <div class="f-container__flights--flight">
-                    <img src="../../assets/images/hotel-3.png" alt="hotel-1" style="width: 250px; height: 150px; border-radius: 10px 0px 0px 10px;">
-                </div>
-
-                <div style="display: flex; flex-direction: column; position:absolute; top: 400px; left: 380px;">
-                    <h5>
-                        Fairmont Banff Springs
-                    </h5>
-                    <div style="display: inline-flex; column-gap: 10px; margin-top: 10px;">
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Free WiFi</p>
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Parking</p>
-                        <p style="border: 1px solid grey; border-radius: 10px; padding: 3px 5px;">Breakfast</p>
-                    </div>
-
-                    <div style="position: absolute; left: 400px;">
-                            <p>Rs. <span style="font-weight: 700; font-size: larger">51,762</span></p>
-                            <button (click)="UpdateText()" id="btn-3" style="padding: 10px 40px; border-radius: 5px; border: none; background-color: rgb(49, 160, 224); font-weight: 500; color: #fff; margin-top: 10px;">SELECT</button>
-                        </div>
+                <div class="f-container__flights--item--last-pane">
+                        <p>Rs. <span style="font-weight: 700; font-size: larger">{{ hotel.price }}</span></p>
+                        <button [id]="i" (click)="UpdateText(i)" style="padding: 10px 40px; border-radius: 5px; border: none; background-color: rgb(49, 160, 224); font-weight: 500; color: #fff; margin-top: 10px;">SELECT</button>
                 </div>
             </div>
         </div>
-        <div>
-            <button class="next-btn" [routerLink]="['/bid']">NEXT</button>
-        </div>
     </div>
+
+    <div class="dynamic-content__two">
+        <img src="../../assets/images/map.png" alt="map">
+    </div>
+    <div style="position: relative;">
+        <button class="next-btn" [routerLink]="['/experiences']">DONE</button>
+    </div>
+    <div style="position:relative; top:20px">
+        <h1 style="position: absolute;top:450px; color: #fff;">''</h1>
+    </div>
+</div>

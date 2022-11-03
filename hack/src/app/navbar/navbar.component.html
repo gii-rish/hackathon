@@ -1,12 +1,18 @@
 <nav class="flex-container">
     <div class="flex-items">
-        iFLY
+        <ul class="logo">
+            <li>iFLY</li>            
+            <li style="border-bottom: solid 3px red;">PERSONAL</li>
+            <li>BUSINESS</li>
+        </ul>
     </div>
     <ul class="flex-items">
+        <li class="anchors" routerLinkActive="active" [routerLink]="['/experiences']">EXPERIENCES</li>
         <li class="anchors" routerLinkActive="active" [routerLink]="['/flights']">FLIGHTS</li>
         <li class="anchors" routerLinkActive="active" [routerLink]="['/hotels']">HOTELS</li>
-        <li class="anchors" routerLinkActive="active" [routerLink]="['/test']">EXPERIENCES</li>
+        <li class="anchors" routerLinkActive="active"  [routerLink]="['/test']">TAXI</li>
         <li class="anchors" routerLinkActive="active"  [routerLink]="['/bid']">MY BID</li>
-        <li class="anchors" routerLinkActive="active" [routerLink]="['/my-booking']">WISHLIST</li>
+        <li class="anchors" routerLinkActive="active" [routerLink]="['/wishlist']">WISHLIST</li>
+        <li class="anchors" routerLinkActive="active" [routerLink]="['/bookings']">BOOKING</li>
     </ul>
 </nav>

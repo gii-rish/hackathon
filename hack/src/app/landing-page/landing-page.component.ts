@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CarouselConfig } from 'ng-carousel-cdk';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HackService } from '../services/hack.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,32 +13,55 @@ import { Router } from '@angular/router';
   providers: [NgbCarouselConfig]
 })
 export class LandingPageComponent implements OnInit {  
-
-  images:any=[];
   searchString: any = '';
+  nameList = [
+    {
+      name:'Greece', image: 'Greece.png'
+    },{
+      name: 'Australia', image: 'Aus.png',
+    },{
+      name: 'Turkey', image: 'turkey.png',
+    },{
+      name: 'Europe', image: 'europe.png'
+    }]
 
-  ngOnInit(): void {
-    this.images = ['../../assets/images/cr1.jpg', '../../assets/images/cr2.jpg', '../../assets/images/cr3.jpg', '../../assets/images/cr4.jpg', '../../assets/images/cr5.jpg', '../../assets/images/cr6.jpg']
-  }
+  trendingList = [
+    {
+      name:'Greece', image: 'maldives.png'
+    },{
+      name: 'Australia', image: 'Aus.png',
+    },{
+      name: 'Turkey', image: 'turkey.png',
+    },{
+      name: 'Europe', image: 'europe.png'
+    }]
+  cards = [
+    {
+      title: "Past Travels", value: "15"
+    },{
+      title: "Wishlist", value: "2"
+    },{
+      title: "MyBookings", value: "0"
+    },{
+      title: "Favourites", value: "15"
+    },{
+      title: "Events", value: "New Year"
+    }
+  ]
 
-  // images = [700, 800, 807].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  constructor(config: NgbCarouselConfig, private router: Router, private http: HttpClient, private hackSerice: HackService) { }
 
-  constructor(config: NgbCarouselConfig, private router: Router) {
-    // 
-    config.interval = 2000;
-    config.keyboard = true;
-    config.pauseOnHover = true;
-  }
+  ngOnInit(): void { }
 
   search() {
-    console.log("searchString: ", this.searchString)
     if (this.searchString) {
-      this.router.navigate(['/list'])
+      this.router.navigate(['/list', { packageName: this.searchString }]);
     }
   }
 
-  navigate() {
-    this.router.navigate(['/list'])
+  navigate(name: string) {
+    this.hackSerice.updatedPackage(name);
+    this.router.navigate(['/list', { packageName: name }]);
   }
 
 }

@@ -1,6 +1,13 @@
 *{
     padding: 0;
     margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2{
+    margin-left: 225px;
+    margin-top: 40px;
+    font-weight: bolder;
 }
 
 .hotel-container {
@@ -30,6 +37,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     .date-container {
@@ -54,7 +62,7 @@
     position:absolute;
     background-color: rgb(49, 160, 224);
     left:520px;
-    top: 390px;
+    top: 460px;
     padding: 20px 180px;
     border: none;
     font-size: larger;
@@ -66,8 +74,8 @@
 
 .heading {
     position: absolute;
-    top: 510px;
-    left: 220px;
+    top: -70px;
+    left: 80px;
 
     h4 {
         font-weight: 700;
@@ -78,43 +86,65 @@
 
 .f-container {
     position: absolute;
-    // border: 1px solid red;
-    top: 590px;
-    left: 220px;
-    width: 70%;
+    margin-left: 80px;
+    width: 50%;
     background-color: #EFF3F2;
-    height: 540px;
     border-radius: 20px;
     padding: 10px;
     &__flights {
+        border-radius: 10px;
+        background-color: #fff;
+        margin-bottom: 10px;
         display: flex;
-        padding: 10px;
-        flex-direction: column;
-        row-gap: 5px;
-        &--flight{
-            // font-weight: 500;
-            height: 150px;
-            width: 95%;  
-            margin-left: 25px;
-            margin-top: 10px;
-            background-color: #fff;
-            border-radius: 10px;
+        padding: 10px;        
+        row-gap: 10px;
+        column-gap: 30px;
+        flex: 1;
 
-            h4{    
-                font-size: x-large;            
+        &--item {
+            flex: 1;
+            &--image{
+                flex: 1;
+            }
+            &--middle-pane {
+                flex: 2;
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            &--last-pane{
+                flex: 1;
+                margin-top: 10px;
             }
         }
     }
 }
 
-.next-btn {
-    position: absolute;
-    bottom: -500px;
-    right: 230px;
-    padding: 5px 40px;
-    border: none;
-    background-color: rgb(49, 160, 224);
-    color: #fff;
-    font-weight: 600;
-    border-radius: 10px;
+.dynamic-content {
+    display: flex;
+    position: relative;
+    &__two {
+        position: absolute;
+        right: 70px;
+        background-color: #000;
+        height: 410px;
+        width: 570px;
+        border-radius: 20px;
+        overflow: scroll;
+    }
+
+    .next-btn {
+        position: absolute;
+        // bottom: 50px;
+        top: 450px;
+        // right: 650px;
+        left: 800px;
+        padding: 5px 40px;
+        border: none;
+        background-color: rgb(49, 160, 224);
+        color: #fff;
+        font-weight: 600;
+        border-radius: 10px;
+    }
 }

@@ -17,6 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "bezier-easing",
+              "jquery"
+            ],
             "outputPath": "dist/hack",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -71,6 +75,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "hack:build",
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "hack:build:production"
@@ -84,7 +92,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hack:build"
+            "browserTarget": "hack:build"            
           }
         },
         "test": {

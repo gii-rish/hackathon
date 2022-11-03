@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HackService } from '../services/hack.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-listing-page',
@@ -12,40 +15,50 @@ export class ListingPageComponent implements OnInit {
   color = 'red';
   color1 = 'red';
   color2 = 'red';
+  starRating = 0;
+  name!: string;
+  packageInfo: any = [];
+  modalRef?: BsModalRef;
 
-  constructor(private router: Router) {
-    this.listItem = [
-      {
-        location: 'New York',
-        month: 'January',
-        days: 4,
-        budget: '500 USD',
-      },
-      {
-        location: 'Chicago',
-        month: 'January',
-        days: 5,
-        budget: '700 USD',
-      },
-      {
-        location: 'San Francisco',
-        month: 'February',
-        days: 3,
-        budget: '400 USD',
-      },{
-        location: 'Lag Vegas',
-        month: 'March',
-        days: 6,
-        budget: '800 USD',
-      }
-    ]
+  constructor(private router: Router, private route: ActivatedRoute, private hackService: HackService, private modalService: BsModalService) {  
+  route.params.subscribe((params:any) => {
+        this.name = params['packageName'];
+        this.getPackageInfo(this.name);
+    });  
   }
   
-  ngOnInit(): void {    
+  ngOnInit(): void { }
+
+  getPackageInfo(name: string){
+    console.log("name: ", name);
+    this.hackService.getPackage(name).subscribe( data => {
+      this.packageInfo = data;
+    })
   }
 
   cancel(){
     this.router.navigate(['/flights'])
+  }
+
+    openModal(id: number, index: any, template?: TemplateRef<any>) {      
+      $("#"+String(index)).attr('class', 'bi bi-heart-fill');
+      this.starRating = 0;
+      let data = JSON.parse(localStorage.getItem("data") || '{}');
+      console.log("Data: ", data);
+
+      if(Object.entries(data).length !== 0 && this.name === data['name'] && !data['id'].includes(id)){
+        data['id'].push(id)
+        localStorage.setItem('data', JSON.stringify(data));
+      }else if(Object.entries(data).length !== 0 && this.name !== data['name']){        
+        localStorage.removeItem("data");
+        localStorage.setItem('data', JSON.stringify({name: this.name, id: [id]}));
+      }else{        
+        localStorage.setItem('data', JSON.stringify({name: this.name, id: [id]}));
+      }
+
+    if (template) {
+      this.modalRef = this.modalService.show(template);
+    }  
   }
 
 }

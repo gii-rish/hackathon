@@ -1,0 +1,569 @@
+{
+    "Greece": [
+        {
+            "id": 1,
+            "name": "Athens and Santorinii Vacation Packages",
+            "stay": "Athens (3N) > Santorini (3N)",
+            "offerings": [
+                "leisure",
+                "Attraction"
+            ],
+            "activities": [
+                "Visit Plaka - oldest sections of Athens",
+                "Acropolis museum",
+                "Greek Wine and Tapas Tasting Experience in Athens",
+                "Visit Black Beach"
+            ],
+            "inclusions": [
+                {"act": "Hotel", "status": "check"},
+                {"act": "8 activities", "status": "check"},
+                {"act": "Flights", "status": "check"},
+                {"act": "Transfers", "status": "check"}
+            ],
+            "price": "98,468",
+            "image": "santorini.png"
+        },
+        {
+            "id": 2,
+            "name": "Athens Mykonos Santorini Crete Package",
+            "stay": "Crete (2N) > Santorini (3N)",
+            "offerings": [
+                "leisure",
+                "Attraction"
+            ],
+            "activities": [
+                "Visit Museum of Prehistoric Thera",
+                "Visit Santorini Arts Factory",
+                "Visit Black Beach"
+            ],
+            "inclusions": [
+                {"act": "Hotel", "status": "check"},
+                {"act": "6 activities", "status": "check"},
+                {"act": "Flights", "status": "x"},
+                {"act": "Transfers", "status": "check"}
+            ],
+            "price": "81,568",
+            "image": "crete.png"
+        },
+        {
+            "id": 3,
+            "name": "Rejuvenating Six Nights Greece Packages",
+            "stay": "Athens (3N) > Mykonos (3N)",
+            "offerings": [
+                "leisure",
+                "Attraction",
+                "Adventure"
+            ],
+            "activities": [
+                "Visit Plaka - oldest sections of Athens",
+                "Visit Syntagma Square",
+                "Visit Museum of Prehistoric Thera",
+                "Visit Santorini Arts Factory",
+                "Visit Black Beach",
+                "Panathenaic Stadium"
+            ],
+            "inclusions": [
+                {"act": "Hotel", "status": "check"},
+                {"act": "8 activities", "status": "check"},
+                {"act": "Flights", "status": "x"},
+                {"act": "Transfers", "status": "check"}
+            ],
+            "price": "1,21,468",
+            "image": "greece_3.png"
+        }
+    ],
+    "Australia": [
+        {
+            "id": 1,
+            "name": "Explore Byron Bay and Sydney",
+            "stay": "Byron Bay (2N)Sydney (4N)",
+            "offerings": [
+                "leisure",
+                "Attraction"
+            ],
+            "activities": [
+                "Byron Bay Dolphin Kayaking Tour",
+                "Premium Hop-On Hop-Off Bus Tour in Sydney",
+                "Enriching Blue Mountains trip to Sydney Olympic Park, Featherdale Wildlife Park",
+                "Visit Black Beach"
+            ],
+            "inclusions": [
+              {"act": "Hotel", "status": "check"},
+              {"act": "4 activities", "status": "check"},
+              {"act": "Visa fees", "status": "check"},
+              {"act": "Transfers", "status": "check"},
+              {"act": "Flights", "status": "x"}
+            ],
+            "price": "65,885",
+            "image": "aus1.png"
+        },
+        {
+            "id": 2,
+            "name": "Simply Sydney for Tourists",
+            "stay": "Sydney(6N)",
+            "offerings": [
+                "leisure",
+                "Attraction"
+            ],
+            "activities": [
+                "Hunter Valley Wineries Day Tour from Sydney",
+                "Port Stephens Day Tour From Sydney Including 4WD, Sandboarding and Dolphins",
+                "Deluxe Hop-On Hop-Off Bus Tour in Sydney"
+            ],
+            "inclusions": [
+              {"act": "Hotel", "status": "check"},
+              {"act": "4 activities", "status": "check"},
+              {"act": "Visa fees", "status": "check"},
+              {"act": "Transfers", "status": "check"},
+              {"act": "Flights", "status": "x"}
+            ],
+            "price": "95,208",
+            "image": "aus2.png"
+        },
+        {
+            "id": 3,
+            "name": "Watch a Match @ Adelaide",
+            "stay": "Adelaide (3N) > Melbourne (3N)",
+            "offerings": [
+                "leisure",
+                "Attraction",
+                "Adventure"
+            ],
+            "activities": [
+                "Adelaide Cricket Match- valid only on 2nd November",
+                "Melbourne Hop on Hop off Bus Tour",
+                "1 Day Great Ocean Road Tour",
+                "Visit Santorini Arts Factory",
+                "Visit Black Beach",
+                "Panathenaic Stadium"
+            ],
+            "inclusions": [
+              {"act": "Hotel", "status": "check"},
+              {"act": "4 activities", "status": "check"},
+              {"act": "Transfers", "status": "check"},
+              {"act": "Flights", "status": "x"}
+            ],
+            "price": "1,33,204",
+            "image": "aus3.png"
+        },
+        {
+            "id": 4,
+            "name": "Experience Australia and Cricket",
+            "stay": "Melbourne (3N) > Gold Coast (3N)+1 city",
+            "offerings": [
+                "leisure"
+            ],
+            "activities": [
+                "AMelbourne Cricket Match- valid only on 22nd October",
+                "Dreamworld 1 Day Ticket",
+                "Kuranda Highlights including Rainforestation Aboriginal Culture and Wildlife R1B"
+            ],
+            "inclusions": [
+              {"act": "Hotel", "status": "check"},
+              {"act": "4 activities", "status": "check"},              
+              {"act": "Transfers", "status": "check"},
+              {"act": "Flights", "status": "x"}
+            ],
+            "price": "1,13,237",
+            "image": "aus4.png"
+        }
+    ],
+     "Turkey": [
+        {
+            "id": 1,
+            "name": "Amazing Turkey Tour Packages",
+            "stay": "Istanbul (5N)",
+            "offerings": [
+                "Attraction",
+                "leisure"
+            ],
+            "activities": [
+                "Full Day: Classic Istanbul Tour Including Blue Mosque, Hippodrome, Hagia Sophia and Topkapi Palace",
+                "All Inclusive Bosphorus Dinner Cruise with Turkish Night Show from Istanbul",
+                "Istanbul Princes’ Islands Boat Trip with Lunch and Horse-Drawn Carriage Ride"
+            ],
+            "inclusions": [
+                {"act": "Hotel", "status": "check"},
+                {"act": "4 activities", "status": "check"},
+                {"act": "Visa fees", "status": "check"},
+                {"act": "Transfers", "status": "check"},
+                {"act": "Flights", "status": "check"}
+            ],
+            "price": "48,741",
+            "image": "turkey1.png"
+        },
+        {
+            "id": 2,
+            "name": "Fantastic 5 Nights Turkey Packages",
+            "stay": "Istanbul (3N) > Goreme (2N)",
+            "offerings": [
+                "leisure"
+            ],
+            "activities": [
+                "Full Day: Classic Istanbul Tour Including Blue Mosque, Hippodrome, Hagia Sophia and Topkapi Palace",
+                "One Hour Deluxe Balloon Flight (Goreme Valley)"
+            ],
+            "inclusions": [
+                {"act": "Hotel", "status": "check"},
+                {"act": "2 activities", "status": "check"},
+                {"act": "Visa fees", "status": "check"},
+                {"act": "Transfers", "status": "check"},
+                {"act": "Flights", "status": "check"}
+            ],
+            "price": "76,262",
+            "image": "turkey2.png"
+        },
+        {
+            "id": 3,
+            "name": "Spectacular Turkey Tour Packages From India",
+            "stay": "Istanbul (2N) > Antalya (2N)",
+            "offerings": [
+                "leisure"
+            ],
+            "activities": [
+                "Full Day: Classic Istanbul Tour Including Blue Mosque, Hippodrome, Hagia Sophia and Topkapi Palace",
+                "Pamukkale Tour"
+            ],
+            "inclusions": [
+                {"act": "Hotel", "status": "check"},
+                {"act": "2 activities", "status": "check"},
+                {"act": "Visa fees", "status": "check"},
+                {"act": "Transfers", "status": "check"},
+                {"act": "Flights", "status": "check"}
+            ],
+            "price": "58,636",
+            "image": "turkey3.png"
+        },
+        {
+            "id": 4,
+            "name": "Serene Turkey Holiday Packages",
+            "stay": "Istanbul (3N) > Goreme (2N)",
+            "offerings": [
+                "Attraction",
+                "leisure"
+            ],
+            "activities": [
+                "Full Day: Classic Istanbul Tour Including Blue Mosque, Hippodrome, Hagia Sophia and Topkapi Palace",
+                "One Hour Deluxe Balloon Flight (Goreme Valley)",
+                "Pamukkale Tour"
+            ],
+            "inclusions": [
+                {"act": "Hotel", "status": "check"},
+                {"act": "4 activities", "status": "check"},
+                {"act": "Visa fees", "status": "check"},
+                {"act": "Transfers", "status": "check"},
+                {"act": "Flights", "status": "check"}
+            ],
+            "price": "1,11,008",
+            "image": "turkey4.png"
+        }
+
+    ],
+    "Europe": [
+    {
+        "id": 1,
+        "name": "Magical 6 Nights Europe Tour Packages",
+        "stay": "Vienna (3N) > Budapest (3N)",
+        "offerings": [
+            "Leisure",
+            "Attraction"
+        ],
+        "activities": [
+            "Margaret island",
+            "Hosok tere (The Heroes' Square)",
+            "Budapest Sightseeing Danube River Cruise ticket"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "3 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "48,500",
+        "image": "europe1.png"
+    },
+    {
+        "id": 2,
+        "name": "Perfect 10 Nights Europe Trip Packages",
+        "stay": "Lisbon (6N) > Porto (4N)",
+        "offerings": [
+            "Adventure",
+            "Attraction"
+        ],
+        "activities": [
+            "Modern Lisbon Hop-On Hop-Off Bus Tour",
+            "Jeronimos Monastery",
+            "Afternoon Waterfront Tour with Locals"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "3 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "66,262",
+        "image": "europe2.png"
+    },
+    {
+        "id": 3,
+        "name": "Scenic 10 Nights Europe Tour Package from India",
+        "stay": "Paris (5N) > Interlaken (5N)",
+        "offerings": [
+            "Kid_friendly",
+            "Attraction"
+        ],
+        "activities": [
+            "REX STUDIOS",
+            "Paris Walking Tour for Children and Families",
+            "Explore Montmartre"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "3 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "1,45,567",
+        "image": "europe3.png"
+    }
+  ],
+  "Hotels": [
+      { "id": 1,
+        "image": "hotel-1.png",
+        "name": "Hilton Garden New Wing",
+        "offering": [
+          "Breakfast",
+          "Free WiFi",
+          "Convenience store"
+        ],
+        "price": "58,506"
+      },
+      {
+        "id": 2,
+        "image": "hotel-2.png",
+        "name": "Cabana El Condor - Complejo El Taller",
+        "offering": [
+          "Breakfast",
+          "Free WiFi",
+          "Free Parking"
+        ],
+        "price": "46,609"
+      },
+      {
+        "id": 3,
+        "image": "hotel-3.png",
+        "name": "Fairmont Banff Springs",
+        "offering": [
+          "Breakfast",
+          "Free WiFi",
+          "Parking"
+        ],
+        "price": "51,452"
+      }
+  ],
+  "Bali": [
+    {
+        "id": 1,
+        "name": "Bali Tour Package 4 Days 3 Nights",
+        "stay": "Seminyak (2N) > Kuta (1N)",
+        "offerings": [
+            "Leisure"
+        ],
+        "activities": [
+            "Private South Bali Trail-Nusa Dua Beach, GWK, Padang-padang Beach, Uluwatu",
+            "Guided Temple Tour: Taman Ayun Temple + Alas Kedaton Temple + Tanah Lot Temple"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "2 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "check"}
+        ],
+        "price": "39,239",
+        "image": "bali1.png"
+    },
+    {
+        "id": 2,
+        "name": "Blissful Kuta Seminyak Ubud Tour Package",
+        "stay": "Kuta (2N) > Seminyak (2N)",
+        "offerings": [
+            "Attraction",
+            "leisure"
+        ],
+        "activities": [
+            "Water Sports Combo: Banana Boat + Sea Walking",
+            "Candle Light Dinner in Anvaya Beach Resort Bali",
+            "Guided Temple Tour: Taman Ayun Temple + Alas Kedaton Temple + Tanah Lot Temple"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "3 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "check"}
+        ],
+        "price": "56,924",
+        "image": "bali2.png"
+    },
+    {
+        "id": 3,
+        "name": "Enigmatic 7 Nights Bali Holiday Packages",
+        "stay": "Kuta (3N) > Nusa Penida (2N)",
+        "offerings": [
+            "Attraction",
+            "leisure"
+        ],
+        "activities": [
+            "Taman Ayun, Bedugul Twin Lakes, Jatiluwih Rice Terraces, Tanah Lot",
+            "White Water Rafting at Telaga Waja River in Bali",
+            "Kintamani and Natural hot spring"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "3 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "35,223",
+        "image": "bali3.png"
+    }
+    ],
+    "Vietnam": [
+    {
+        "id": 1,
+        "name": "Refreshing 5 Nights in Hanoi and Ho Chi Minh, Vietnam",
+        "stay": "Hanoi (2N) > Ho Chi Minh (3N)",
+        "offerings": [
+            "Leisure"
+        ],
+        "activities": [
+		
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "0 activities", "status": "check"},
+            {"act": "Visa fees", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "20,305",
+        "image": "vietnam1.png"
+    },
+    {
+        "id": 2,
+        "name": "Spellbinding Vietnam 7 nights package to Ho Chi Minh and Nha Trang",
+        "stay": "Ho Chi Minh (4N) > Nha Trang (3N)",
+        "offerings": [
+            "Leisure",
+            "Beach"
+        ],
+
+        "activities": [
+            "Saigon – Mekong Delta My Tho Full Day Excursion with Lunch ",
+            "Mun Island, Mot Island and Hon Tam Island Day Tour"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "2 activities", "status": "check"},
+            {"act": "Visa fees", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "32,911",
+        "image": "vietnam2.png"
+    },
+    {
+        "id": 3,
+        "name": "A Lovely 6 nights to Hanoi and Ho Chi Minh for 5 days",
+        "stay": "Hanoi (3N) > Ho Chi Minh (3N)",
+        "offerings": [
+            "Attraction",
+            "Leisure"
+        ],
+        "activities": [
+            "Half-day City Tour of Hanoi including Water Puppet show with Private transfers ",
+            "Cu Chi Tunnels and Saigon City tour Full Day with Lunch"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "2 activities", "status": "check"},
+            {"act": "Visa fees", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "41,541",
+        "image": "vietnam3.png"
+    },
+    {
+        "id": 4,
+        "name": "Breathtaking 9 Nights Vietnam Holiday in Hanoi, Da nang and Ho Chi Minh",
+        "stay": "Hanoi (3N) > Da nang (3N) > Ho Chi Minh(3N)",
+        "offerings": [
+            "Leisure"
+        ],
+        "activities": [
+            "Half-day shopping tour Hanoi",
+            "Marble Mountain and Lady Buddha from Hoi An or Da Nang",
+            "Saigon – Mekong Delta My Tho Full Day Excursion with Lunch "
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "3 activities", "status": "check"},
+            {"act": "Visa fees", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "35658",
+        "image": "vietnam4.png"
+    }
+    ],
+    "Flights": [
+      {
+        "id": 1,
+        "flightNo": "AL2398",
+        "startTime": "00.50",
+        "source": "BLR",
+        "endTime": "13.40",
+        "destination": "CDG",
+        "price": "38,558",
+        "loadFactor": "30%",
+        "probability": "72%",
+        "color": {"background-color": "green"}
+      },
+      {
+        "id": 2,
+        "flightNo": "KE0890",
+        "startTime": "13.15",
+        "source": "BLR",
+        "endTime": "23.10",
+        "destination": "CDG",
+        "price": "62,024",
+        "loadFactor": "60%",
+        "probability": "33%",
+        "color": {"background-color": "red"}
+      },
+      {
+        "id": 3,
+        "flightNo": "JA0890",
+        "startTime": "10.05",
+        "source": "BLR",
+        "endTime": "20.52",
+        "destination": "CDG",
+        "price": "58,506",
+        "loadFactor": "72%",
+        "probability": "22%",
+        "color": {"background-color": "red"}
+      },
+      {
+        "id": 4,
+        "flightNo": "EY1020",
+        "startTime": "11.25",
+        "source": "BLR",
+        "endTime": "21.50",
+        "destination": "CDG",
+        "price": "61,476",
+        "loadFactor": "55%",
+        "probability": "40%",
+        "color": {"background-color": "orange"}
+      }
+  ]
+}

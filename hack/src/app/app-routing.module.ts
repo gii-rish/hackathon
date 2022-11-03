@@ -8,18 +8,20 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ListingPageComponent } from './listing-page/listing-page.component';
 import { LoginComponent } from './login/login.component';
 import { MyBookingsComponent } from './my-bookings/my-bookings.component';
+import { ProfileComponent } from './profile/profile.component';
 import { TaxiComponent } from './taxi/taxi.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent,  pathMatch: 'full' },
-  { path: 'landingPage', component: LandingPageComponent,  pathMatch: 'full' },
+  { path: 'experiences', component: LandingPageComponent,  pathMatch: 'full' },
   { path: 'detailsPage', component: DetailsPageComponent },
   { path: 'list', component: ListingPageComponent},
-  { path: 'my-booking', component: MyBookingsComponent },
+  { path: 'wishlist', component: MyBookingsComponent },
   { path: 'taxi', component: TaxiComponent },
   { path: 'hotels', component: HotelsComponent },
   { path: 'flights', component: FlightsComponent },
-  { path: 'bid', component: BiddingComponent }
+  { path: 'bid', component: BiddingComponent },
+  { path: 'bookings', component: ProfileComponent }
 
 ];
 

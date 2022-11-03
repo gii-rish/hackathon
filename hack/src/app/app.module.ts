@@ -16,6 +16,9 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { TaxiComponent } from './taxi/taxi.component';
 import { FlightsComponent } from './flights/flights.component';
 import { BiddingComponent } from './bidding/bidding.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,17 @@ import { BiddingComponent } from './bidding/bidding.component';
     HotelsComponent,
     TaxiComponent,
     FlightsComponent,
-    BiddingComponent
+    BiddingComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

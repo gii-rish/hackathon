@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.username === 'John' && this.password === 'root') {
-      this.router.navigate(['/landingPage']);
+      this.router.navigate(['/experiences']);
     }
   }
 

@@ -1,34 +1,43 @@
 <app-navbar></app-navbar>
 <div style="background-image: url('../../assets/images/map3.png'); height: 540px;">
+<h2>Start biding for your upgrade</h2>
 <div class="hotel-container">
-    <div class="item">
-        <i class="bi bi-airplane-engines" style="position: absolute; right: 75rem; top: 225px"></i>
-        <input type="text" placeholder="PNR/Booking" class="pickup" style="width: 300px;">
+    <div class="radio-btn" novalidate>
+        <div class="custom-control custom-radio" style="cursor: pointer;">
+            <button id="btn-auto" (click)="changeColor('btn-auto')" class="top-btn">Auto</button>
+        </div>
 
-        <i class="bi bi-person" style="position: absolute; left: 38.5rem; top: 225px"></i>
-        <input type="text" placeholder="Name" class="pickup" style="width: 300px;">
+        <div class="custom-control custom-radio" style="margin-left: 20px;cursor: pointer;">
+            <button id="btn-manual" (click)="changeColor('btn-manual')" class="top-btn">Manual</button>            
+        </div>
+   </div>
 
-        <i class="bi bi-arrow-up-circle" style="position: absolute; left: 58.5rem; top: 225px"></i>
-        <input type="text" placeholder="Upgrade" class="pickup" style="width: 300px;">
+    <div class="item" style="position:relative;top:-30px;margin-right: 10px;">
+        <div style="position: relative;">
+            <i class="bi bi-airplane-engines" style="position: absolute; right: 16.5rem; top: 73px"></i>
+            <input type="text" placeholder="PNR/Booking" class="pickup" style="width: 300px;">
+        </div>
+        <div style="position: relative;">
+            <i class="bi bi-person" style="position: absolute; left: 1rem; top: 73px"></i>
+            <input type="text" placeholder="Name" class="pickup" style="width: 300px;">
+        </div>
+
+        <div style="position: relative;">
+            <i class="bi bi-arrow-up-circle" style="position: absolute; left: 1rem; top: 73px"></i>
+            <input type="text" placeholder="Upgrade" class="pickup" style="width: 300px;">
+        </div>
     </div>
 
-    <div class="item">        
-        <input type="text" placeholder="Current Bid" class="pickup" style="width: 460px; position: absolute; top: 240px; left: 280px;">
-        <i class="bi bi-plus-slash-minus" style="position: absolute; top: 313px; left: 295px; font-size: large;" ></i>
+    <div class="item" style="position:relative;top:-30px;margin-left: 5px;">       
+        <div style="position: relative;">
+            <input type="text" placeholder="Current Bid" class="pickup" style="width: 460px; position: absolute; top: -40px; right: 10px;">
+            <i class="bi bi-plus-slash-minus" style="position: absolute; top: 30px; right: 435px; font-size: large;" ></i>
+        </div>
 
-        <input type="text" placeholder="My Bid" class="pickup" style="width: 460px; position: absolute; top: 240px; right: 295px;">
-        <i class="bi bi-plus-slash-minus" style="position: absolute; top: 312px; right: 725px; font-size: large;"></i>
-        
-
-            <!-- <label for="Adults" style="position:relative;">Adults</label>
-            <select style="border: none; background-color: inherit;">
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select> -->
-        <!-- </div> -->
+        <div style="position: relative;">
+            <input type="text" placeholder="My Bid" class="pickup" style="width: 460px; position: absolute; top: -40px;">
+            <i class="bi bi-plus-slash-minus" style="position: absolute; top: 33px; left: 10px; font-size: large;"></i>
+        </div>
     </div>
 </div>
 
@@ -37,23 +46,37 @@
 </div>
 </div>
 
-<div class="heading">
-    <h4>Booked flights.</h4>
-</div>
+<div *ngIf="flightInfo.length">
+    <div class="heading">
+        <h4>Booked flights.</h4>
+    </div>
 
-<div class="f-container">
-    <div class="f-container__flights">
-        <div class="f-container__flights--flight">
-            <i class="bi bi-airplane-engines" style="position: absolute; right: 57rem; top: 50px; font-size: xx-large; color: rgb(67, 67, 67);"></i>
-            <h5 style="position: absolute; left:150px; top: 65px; color: rgb(67, 67, 67);">AL2398</h5>
-            <div style="display: flex; column-gap: 20px; position: relative; left: 300px; top: 30px;">
-                <h4>00.50</h4>
-                <p style="position: absolute; top: 25px; left: 15px; color: grey;">BLR</p>
-                <div style="margin-top:6px; color: grey;">-------------------></div>
-                <h4>13.40</h4>
-                <p style="position: absolute; top: 25px; right: 680px; color: grey;">CDG</p>
-                <div style="position: absolute; top :3px; left: 440px;">
-                    <p>Rs. <span style="font-weight: 700; font-size: x-large">38,558</span></p>
+    <div class="fl-container">
+        <div class="fl-container__flights">
+            <div class="fl-container__flights--flight" *ngFor="let flight of flightInfo; let i=index">
+                <div style="position: relative;">
+                    <i class="bi bi-airplane-engines" style="position: absolute; left: 2rem; top: 25px; font-size: xx-large; color: rgb(67, 67, 67);"></i>
+                    <h5 style="position: absolute; left:70px; top: 40px; color: rgb(67, 67, 67);">{{ flight.flightNo }}</h5>
+                </div>
+                <div style="display: flex; column-gap: 20px; position: relative; left: 210px; top: 30px;">
+                    <h4>{{ flight.startTime }} </h4>
+                    <p style="position: absolute; top: 25px; left: 15px; color: grey;">{{ flight.source }}</p>
+                    <div style="margin-top:6px; color: grey;">-------------------></div>
+                    <h4>{{ flight.endTime }}</h4>
+                    <p style="position: absolute; top: 25px; left: 235px; color: grey;">CDG</p>
+                    
+                    <div style="position: relative; left: 15px;">
+                        <h6 style="color: grey;">Load factor</h6>
+                        <span style="margin-left: 30px; font-weight: 800; font-size: large;">{{ flight.loadFactor }}</span>
+                    </div>
+                    <div style="position: relative; left: 40px;">
+                        <h6 style="color: grey;">Probability</h6>
+                        <span [ngStyle]="flight.color" style="color: #fff;padding: 3px;margin-left: 30px; font-weight: 400; font-size: medium; border-radius: 10px;">{{ flight.probability }}</span>
+                    </div>
+
+                    <div style="position: absolute; top :10px; right: 260px;">
+                        <p>Rs. <span style="font-weight: 700; font-size: larger">{{ flight.price }}</span></p>
+                    </div>
                 </div>
             </div>
         </div>

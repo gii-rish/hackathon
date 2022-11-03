@@ -1,13 +1,38 @@
 *{
     padding: 0;
     margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+h2{
+    margin-left: 225px;
+    margin-top: 40px;
+    font-weight: bolder;
+}
+
+.top-btn {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: rgb(49, 160, 224);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.radio-btn{
+    display: flex;
+    font-size: large;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
 
 .hotel-container {
     border: 1px solid #FAFCFC;    
     width: 70%;
     margin-left: 220px;
-    margin-top: 50px;
+    margin-top: 30px;
     height: 280px;
     border-radius: 20px;
     padding: 10px;
@@ -36,7 +61,7 @@
     position:absolute;
     background-color: rgb(49, 160, 224);
     left:520px;
-    top: 390px;
+    top: 445px;
     padding: 20px 180px;
     border: none;
     font-size: larger;
@@ -59,23 +84,19 @@
     }
 }
 
-.f-container {
-    position: absolute;
-    // border: 1px solid red;
-    top: 590px;
-    left: 220px;
+.fl-container {
+    margin-left: 220px;
+    margin-top: -90px;
     width: 70%;
     background-color: #EFF3F2;
-    height: 160px;
     border-radius: 20px;
-    padding: 10px;
+    padding: 8px 10px;
     &__flights {
         display: flex;
         padding: 10px;
         flex-direction: column;
         row-gap: 5px;
-        &--flight{
-            // font-weight: 500;
+        &--flight{            
             height: 100px;
             width: 95%;  
             margin-left: 25px;

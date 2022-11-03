@@ -1,108 +1,98 @@
 <app-navbar></app-navbar>
 
-<div class="h-100" style="margin: 50px;"> 
+<div *ngIf="packageInfo" class="h-100" style="margin: 50px;"> 
+    <h1 class="h2-title"><span style="color: rgb(82, 79, 79); font-size: larger;">Wishlisted items</span></h1>
     <div class="card-body">
-        <div class="body-item">
-            <img class="item" src='../../assets/images/santorini.png' alt="Random image" style="width: 400px; height: 400px; ">
-            <div class="item__h4">
-                <h3>
-                    Athens and Santorini Vacation Packages
-                </h3>
-                <p style="color:grey; font-size: large;">
-                    Athens (3N) > Santorini (3N)
-                </p>
-                <div class="cards">
-                    <p class="cards__item">Leisure</p>
-                    <p class="cards__item">Attraction</p>
+        <div class="body-items" *ngFor="let item of packageInfo">
+            <img class="body-items__item__image" [src]="'../../assets/images/'+item.image" alt="Random image">
+            <div class="body-items__item">
+                <div class="body-items__item__middle-pane">
+                    <h3>
+                        {{ item.name }}
+                    </h3>
+                    <p style="color:grey; font-size: large;">
+                        {{ item.stay }}
+                    </p>
+                    <div class="cards">
+                        <span *ngFor="let offer of item.offerings">
+                            <p class="cards__item">{{ offer }}</p>
+                        </span>
+                    </div>
+                    <ul class="activities">
+                        <span *ngFor="let act of item.activities">
+                            <li>{{ act }}</li>
+                        </span>
+                    </ul>
                 </div>
-                <ul style="margin-top: 15px; color: rgb(65, 64, 64); font-size: large;">
-                    <li>Visit Plaka - oldest sections of Athens</li>
-                    <li>Acropolis museum</li>
-                    <li>Greek Wine and Tapas Tasting Experience in Athens</li>
-                </ul>
             </div>
-            <div class="item third-pane">
-                <div class="item__h3">
+            <div class="body-items__item__third-pane">
+                <div class="item_h3">
                     <h6>
                         INCLUSIONS (CUSTOMISABLE)
                     </h6>
                     <ul>
-                        <li>
-                            <i class="bi bi-check" style="color:green;font-size: 20px;"></i>
-                            Hotels</li>
-                        <li>
-                            <i class="bi bi-check" style="color:green;font-size: 20px;"></i>
-                            8 activities</li>
-                        <li>
-                            <i class="bi bi-check" style="color:green;font-size: 20px;"></i>
-                            Flights</li>
-                        <li>
-                            <i class="bi bi-check" style="color:green;font-size: 20px;"></i>
-                            Transfers</li>
+                        <li *ngFor="let incl of item.inclusions">
+                            <i [class]="'bi bi-'+incl.status" style="color:green;font-size: 20px;"></i>
+                            {{ incl.act }}
+                        </li>
                     </ul>
                     <div class="bttm">
                         <h3 style="color: grey; font-weight: 700; font-size: medium;">Starts From</h3>
-                        <i class="bi bi-currency-rupee" style="font-size: 20px;"></i>
-                        <span style="font-size:20px;">98,468</span>
+                        <i class="bi bi-currency-rupee" style="font-size: 25px;"></i>
+                        <span style="font-size:30px;">{{ item.price }}</span>
                         <span style="color: gray; font-size: small; font-weight: 400;">/Person</span>
                     </div>
                     <button class="bottom-btn">
-                        <i class="bi bi-heart-fill" style="color: rgb(245, 169, 169); position: relative; left: -100px; font-size: larger; cursor: pointer;"></i>
+                        <i class="bi bi-heart-fill" style="color: red; position: relative; left: 220px; font-size: larger; cursor: pointer;"></i>
                         View Deal
                     </button>
                 </div>
             </div>
         </div>
-    </div>
+        <h1 style="color: rgb(82, 79, 79); margin-bottom: -20px; margin-top: 30px;">Items similar to your interest.</h1>
 
-        <div class="card-body">
-        <div class="body-item">
-            <img class="item" src='../../assets/images/crete.png' alt="Random image" style="width: 400px; height: 400px;">
-            <div class="item__h4">
-                <h3>
-                    Athens Mykonos Santorini Crete Package
-                </h3>
-                <p style="color:grey; font-size: large;">
-                    Crete (3N) > Santorini (3N)
-                </p>
-                <div class="cards">
-                    <p class="cards__item">Leisure</p>
-                    <p class="cards__item">Attraction</p>
+        <div class="body-items" *ngFor="let item of wishlistedInfo">
+            <img class="body-items__item__image" [src]="'../../assets/images/'+item.image" alt="Random image">
+            <div class="body-items__item">
+                <div class="body-items__item__middle-pane">
+                    <h3>
+                        {{ item.name }}
+                    </h3>
+                    <p style="color:grey; font-size: large;">
+                        {{ item.stay }}
+                    </p>
+                    <div class="cards">
+                        <span *ngFor="let offer of item.offerings">
+                            <p class="cards__item">{{ offer }}</p>
+                        </span>
+                    </div>
+                    <ul class="activities">
+                        <span *ngFor="let act of item.activities">
+                            <li>{{ act }}</li>
+                        </span>
+                    </ul>
                 </div>
-                <ul style="margin-top: 15px; color: rgb(65, 64, 64); font-size: large;">
-                    <li>Visit Santorini Arts Factory</li>
-                    <li>Visit Museum of Prehistoric Thera</li>
-                    <li>Visit Black Beach</li>
-                </ul>
             </div>
-            <div class="item third-pane">
-                <div class="item__h3">
+            
+            <div class="body-items__item__third-pane">
+                <div class="item_h3">
                     <h6>
                         INCLUSIONS (CUSTOMISABLE)
                     </h6>
                     <ul>
-                        <li>
-                            <i class="bi bi-check" style="color:green;font-size: 20px;"></i>
-                            Hotels</li>
-                        <li>
-                            <i class="bi bi-check" style="color:green;font-size: 20px;"></i>
-                            6 activities</li>
-                        <li>
-                            <i class="bi bi-check" style="color:green;font-size: 20px;"></i>
-                            Flights</li>
-                        <li>
-                            <i class="bi bi-x" style="color:red;font-size: 20px;"></i>
-                            <!-- <i class="bi bi-check" style="color:green;font-size: 20px;"></i> -->
-                            Transfers</li>
+                        <li *ngFor="let incl of item.inclusions">
+                            <i [class]="'bi bi-'+incl.status" style="color:green;font-size: 20px;"></i>
+                            {{ incl.act }}
+                        </li>
                     </ul>
                     <div class="bttm">
                         <h3 style="color: grey; font-weight: 700; font-size: medium;">Starts From</h3>
-                        <i class="bi bi-currency-rupee" style="font-size: 20px;"></i>
-                        <span style="font-size:20px;">81,568</span>
+                        <i class="bi bi-currency-rupee" style="font-size: 25px;"></i>
+                        <span style="font-size:30px;">{{ item.price }}</span>
                         <span style="color: gray; font-size: small; font-weight: 400;">/Person</span>
                     </div>
                     <button class="bottom-btn">
-                        <i class="bi bi-heart-fill" style="color: rgb(245, 169, 169); position: relative; left: -100px; font-size: larger; cursor: pointer;"></i>
+                        <i class="bi bi-heart" (click)="openModal(template)" style="color: red; position: relative; left: 220px; font-size: larger; cursor: pointer;"></i>
                         View Deal
                     </button>
                 </div>
@@ -110,3 +100,10 @@
         </div>
     </div>
 </div>
+
+<ng-template #template>
+    <div class="custom modal-body text-center p-3 bg-success text-white rounded">
+        <h5 class="pt-2">Please enter the rating.</h5>
+        <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+    </div>
+</ng-template>

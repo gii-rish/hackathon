@@ -1,11 +1,8 @@
 <app-navbar></app-navbar>
+
 <div style="background-color: #F4FDF9; height: 100%;" >
 <div style="background-image: url('../../assets/images/map3.png');width: 90%;margin: 0 auto;">
 
-    <!-- <div class="d-flex w-100 justify-content-center">
-      <button type="button" class="btn btn-secondary m-2">Personal</button>
-      <button type="button" class="btn btn-secondary m-2">Business</button>
-    </div> -->
     <h2 class="h2-one">
         <b style="font-size:larger;">Hey, JOHN DOE</b>!
     </h2>
@@ -15,15 +12,23 @@
     </div>
 </div>
 
+<div class="cards">
+    <span class="something" *ngFor="let card of cards">
+        <div class="cards__item">
+            <p>{{ card.title }}</p>
+            <p style="margin-left: 30px;">{{ card.value }}</p>
+        </div>
+    </span>
+</div>
+
 <div class="img-container">    
     <h3>
          Specially Crafted Packages for <b style="font-size:larger;">YOU!</b>
     </h3>
     <div class="flex-items">
-        <img class="image" src='../../assets/images/aus2.png' alt="Random image" (click)="navigate()" style="width: 326px; height: 400px; cursor: pointer;">
-        <img class="image" src='../../assets/images/aus1.png' alt="Random image" style="width: 326px; height: 400px; cursor: pointer;">
-        <img class="image" src='../../assets/images/aus3.png' alt="Random image" style="width: 324px; height: 400px; cursor: pointer;">
-        <img class="image" src='../../assets/images/aus4.png' alt="Random image" style="width: 324px; height: 400px; cursor: pointer;">
+        <span *ngFor="let item of nameList">
+        <img class="image" [src]="'../../assets/images/'+item.image" alt="Random image" (click)="navigate(item.name)" style="width: 326px; height: 400px; cursor: pointer;">
+        </span>
     </div>
 </div>
 

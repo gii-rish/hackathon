@@ -1,30 +1,38 @@
 <app-navbar></app-navbar>
 <div style="background-color: #fff; height: 100%;">
 <div style="background-image: url('../../assets/images/map3.png'); height: 540px;">
+<h2>Where would you like to go?</h2>
     <div class="hotel-container">
         <div class="item">
-            <i class="bi bi-airplane-engines" style="position: absolute; right: 75rem; top: 225px"></i>
-            <input type="text" placeholder="Flying from" class="pickup" [(ngModel)]="from" style="width: 460px;">
-
-            <i class="bi bi-geo-alt-fill" style="position: absolute; left: 48.5rem; top: 225px; color: grey;"></i>
-            <input type="text" placeholder="Flying to" class="pickup" [(ngModel)]="to" style="width: 460px;">
+            <div style="position: relative;">
+                <i class="bi bi-airplane-engines" style="position: absolute; left: 1rem; top:75px"></i>
+                <input type="text" placeholder="Flying from" class="pickup" [(ngModel)]="from" style="width: 460px;">
+            </div>
+            <div style="position: relative;">
+                <i class="bi bi-geo-alt-fill" style="position: absolute; left: 1rem; top: 75px; color: grey;"></i>
+                <input type="text" placeholder="Flying to" class="pickup" [(ngModel)]="to" style="width: 460px;">
+            </div>
         </div>
 
         <div class="item">
-            <input type="text" placeholder="Departure" class="pickup" onfocus="(this.type='date')" [(ngModel)]="departure" style="width: 460px; position: absolute; top: 237px; left: 280px;">
-            <i class="bi bi-box-arrow-in-right" style="position: absolute; top: 310px; left: 280px; font-size: large;" ></i>
+            <div style="position: relative;">
+                <input type="text" placeholder="Departure" class="pickup" onfocus="(this.type='date')" [(ngModel)]="departure" style="width: 460px; position: absolute; right: 0px; top: -40px;">
+                <i class="bi bi-box-arrow-in-right" style="position: absolute; top: 35px; right: 440px; font-size: large;" ></i>
+            </div>
 
-            <div style="border: 1px solid #b6b6b6; background-color: #fff; border-radius: 10px; padding: 10px 10px 10px 35px; color: grey; width: 460px;  position: absolute; top: 300px; right: 290px;">
-            <i class="bi bi-people-fill" style="position: absolute; top: 9px; right: 430px; font-size: large;"></i>
+            <div style="position: relative;">
+                <div style="border: 1px solid #b6b6b6; background-color: #fff; border-radius: 10px; padding: 10px 10px 10px 35px; color: grey; width: 460px;  position: absolute; top: 22px; left: 5px;">
+                <i class="bi bi-people-fill" style="position: absolute; top: 9px; right: 430px; font-size: large;"></i>
 
-                <label for="Adults" style="position:relative;">Adults</label>
-                <select style="border: none; background-color: inherit;">
-                    <option value=""></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
+                    <label for="Adults" style="position:relative;">Adults</label>
+                    <select style="border: none; background-color: inherit;">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -42,60 +50,38 @@
 
         <div class="f-container">
             <div class="f-container__flights">
-                <div class="f-container__flights--flight">
-                    <i class="bi bi-airplane-engines" style="position: absolute; right: 57rem; top: 50px; font-size: xx-large; color: rgb(67, 67, 67);"></i>
-                    <h5 style="position: absolute; left:150px; top: 65px; color: rgb(67, 67, 67);">AL2398</h5>
-                    <div style="display: flex; column-gap: 20px; position: relative; left: 300px; top: 30px;">
-                        <h4>00.50</h4>
-                        <p style="position: absolute; top: 25px; left: 15px; color: grey;">BLR</p>
-                        <div style="margin-top:6px; color: grey;">-------------------></div>
-                        <h4>13.40</h4>
-                        <p style="position: absolute; top: 25px; right: 680px; color: grey;">CDG</p>
-                        <div style="position: absolute; top :-23px; left: 400px;">
-                            <p>Rs. <span style="font-weight: 700; font-size: large">38,558</span></p>
-                            <p style="color: grey;">Average price per passenger</p>
-                            <button (click)="UpdateText()" id='btn-2' style="padding: 5px 30px; border-radius: 5px; border: none; background-color: rgb(49, 160, 224); color: #fff;">SELECT</button>
-                        </div>
+                <div class="f-container__flights--flight" *ngFor="let flight of flights; let i=index">
+                    <div style="position: relative;">
+                        <i class="bi bi-airplane-engines" style="position: absolute; left: 5rem; top: 25px; font-size: xx-large; color: rgb(67, 67, 67);"></i>
+                        <h5 style="position: absolute; left:130px; top: 40px; color: rgb(67, 67, 67);">{{ flight.flightNo }}</h5>
                     </div>
-                </div>
-
-                <div class="f-container__flights--flight">
-                    <i class="bi bi-airplane-engines" style="position: absolute; right: 57rem; top: 165px; font-size: xx-large; color: rgb(67, 67, 67);"></i>
-                    <h5 style="position: absolute; left:150px; top: 180px; color: rgb(67, 67, 67);">JA0890</h5>
-                    <div style="display: flex; column-gap: 20px; position: relative; left: 300px; top: 30px;">
-                        <h4>10.05</h4>
-                        <p style="position: absolute; top: 25px; left: 15px; color: grey;">BLR</p>
+                    <div style="display: flex; column-gap: 20px; position: relative; left: 280px; top: 30px;">
+                        <h4>{{ flight.startTime }} </h4>
+                        <p style="position: absolute; top: 25px; left: 15px; color: grey;">{{ flight.source }}</p>
                         <div style="margin-top:6px; color: grey;">-------------------></div>
-                        <h4>20.40</h4>
-                        <p style="position: absolute; top: 25px; right: 680px; color: grey;">CDG</p>
-                        <div style="position: absolute; top :-23px; left: 400px;">
-                            <p>Rs. <span style="font-weight: 700; font-size: large">58,506</span></p>
-                            <p style="color: grey;">Average price per passenger</p>
-                            <button style="padding: 5px 30px; border-radius: 5px; border: none; background-color: rgb(49, 160, 224); color: #fff;">SELECT</button>
+                        <h4>{{ flight.endTime }}</h4>
+                        <p style="position: absolute; top: 25px; left: 235px; color: grey;">CDG</p>
+                        
+                        <div style="position: relative; left: 60px;">
+                            <h6 style="color: grey;">Load factor</h6>
+                            <span style="margin-left: 30px; font-weight: 800; font-size: large;">{{ flight.loadFactor }}</span>
                         </div>
-                    </div>
-                </div>
+                        <div style="position: relative; left: 120px;">
+                            <h6 style="color: grey;">Probability</h6>
+                            <span [ngStyle]="flight.color" style="color: #fff;padding: 3px;margin-left: 22px; font-weight: 400; font-size: medium; border-radius: 10px;">{{ flight.probability }}</span>
+                        </div>
 
-                <div class="f-container__flights--flight">
-                    <i class="bi bi-airplane-engines" style="position: absolute; right: 57rem; top: 280px; font-size: xx-large; color: rgb(67, 67, 67);"></i>
-                    <h5 style="position: absolute; left:150px; top: 300px; color: rgb(67, 67, 67);">KE0890</h5>
-                    <div style="display: flex; column-gap: 20px; position: relative; left: 300px; top: 30px;">
-                        <h4>13.15</h4>
-                        <p style="position: absolute; top: 25px; left: 15px; color: grey;">BLR</p>
-                        <div style="margin-top:6px; color: grey;">-------------------></div>
-                        <h4>23.10</h4>
-                        <p style="position: absolute; top: 25px; right: 680px; color: grey;">CDG</p>
-                        <div style="position: absolute; top :-23px; left: 400px;">
-                            <p>Rs. <span style="font-weight: 700; font-size: large">62,024</span></p>
+                        <div style="position: absolute; top :-23px; right: 340px;">
+                            <p>Rs. <span style="font-weight: 700; font-size: large">{{ flight.price }}</span></p>
                             <p style="color: grey;">Average price per passenger</p>
-                            <button style="padding: 5px 30px; border-radius: 5px; border: none; background-color: rgb(49, 160, 224); color: #fff;">SELECT</button>
+                            <button [id]="i" (click)="UpdateText(i)" style="padding: 5px 30px; border-radius: 5px; border: none; background-color: rgb(49, 160, 224); color: #fff;">SELECT</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div>
-            <button class="next-btn-done" [routerLink]="['/bid']">DONE</button>
+        <div style="position:relative; margin-bottom: 20px;">
+            <button class="next-btn-done" [routerLink]="['/experiences']">DONE</button>
             <button class="next-btn" [routerLink]="['/hotels']">NEXT</button>
         </div>
     </div>
