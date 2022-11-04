@@ -80,4 +80,9 @@ export class FlightsComponent implements OnInit {
       $(t).css("background-color","green");
   }
 
+    changeText(ind: any) {
+      $("#"+String(ind)).text("SAVED");
+      $("#"+String(ind)).css("background-color","green");
+    }
+
 }

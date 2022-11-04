@@ -27,13 +27,13 @@ export class LandingPageComponent implements OnInit {
 
   trendingList = [
     {
-      name:'Greece', image: 'maldives.png'
+      name:'Maldives', image: 'maldives.png'
     },{
-      name: 'Australia', image: 'Aus.png',
+      name: 'Vietnam', image: 'vietnanm.png',
     },{
-      name: 'Turkey', image: 'turkey.png',
+      name: 'Thailand', image: 'Thailand.png',
     },{
-      name: 'Europe', image: 'europe.png'
+      name: 'Bali', image: 'Bali.png'
     }]
   cards = [
     {
@@ -41,11 +41,11 @@ export class LandingPageComponent implements OnInit {
     },{
       title: "Wishlist", value: "2"
     },{
-      title: "MyBookings", value: "0"
+      title: "Bookings", value: "0"
     },{
-      title: "Favourites", value: "15"
+      title: "Favourites", value: "12"
     },{
-      title: "Events", value: "New Year"
+      title: "Events", value: "3"
     }
   ]
 

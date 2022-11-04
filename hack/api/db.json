@@ -516,6 +516,71 @@
         "image": "vietnam4.png"
     }
     ],
+    "Maldives": [
+    {
+        "id": 1,
+        "name": "A Memorable Maldives Tour Package to Amaya Kuda Rah",
+        "stay": "",
+        "offerings": [
+            "Leisure"
+        ],
+        "activities": [
+            "Stay in exceptional overwater villas and luxury resorts with chic modern amenities",
+            "Explore pristine beaches with your loved one in absolute privacy",
+            "Snorkel in the tranquil blue sea and discover the vibrant marine life"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "3 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "88,672",
+        "image": "maledives1.png"
+    },
+    {
+        "id": 2,
+        "name": "A Fascinating Maldives Tour Package to Cocogiri Island Resort",
+        "stay": "",
+        "offerings": [
+            "Leisure"
+        ],
+        "activities": [
+            "Dine in the luxury of your private infinity pool with your loved one",
+            "Relax and rejuvenate in the unspoilt beaches of the Indian Ocean"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "2 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "82,117",
+        "image": "maledives2.png"
+    },
+    {
+        "id": 3,
+        "name": "A Captivating OBLU XPERIENCE Ailafushi vacation package to the Maldives",
+        "stay": "",
+        "offerings": [
+            "Leisure"
+        ],
+        "activities": [
+            "Includes: All Inclusive Meal Plan",
+            "To & From Speedboat Transfers from Airport",
+            "Customizable Itinerary with Water Villa, Beach Villa and Ocean View Room"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "3 activities", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "51,567",
+        "image": "maledives3.png"
+
+    }
+    ],
     "Flights": [
       {
         "id": 1,

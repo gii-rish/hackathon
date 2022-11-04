@@ -36,11 +36,14 @@
     <h3>
         Top Trending Locations of the Season.
     </h3>
-    <div class="flex-items">        
-        <img class="image" src='../../assets/images/maldives.png' alt="Random image" style="width: 326px; height: 400px; cursor: pointer;">        
+    <div class="flex-items">    
+        <span *ngFor="let item of trendingList">
+        <img class="image" [src]="'../../assets/images/'+item.image" alt="Random image" (click)="navigate(item.name)" style="width: 326px; height: 400px; cursor: pointer;">
+        </span>    
+        <!-- <img class="image" src='../../assets/images/maldives.png' alt="Random image" style="width: 326px; height: 400px; cursor: pointer;">        
         <img class="image" src='../../assets/images/vietnanm.png' alt="Random image" style="width: 326px; height: 400px; cursor: pointer;">
         <img class="image" src='../../assets/images/Thailand.png' alt="Random image" style="width: 324px; height: 400px; cursor: pointer;">
-        <img class="image" src='../../assets/images/Bali.png' alt="Random image" style="width: 324px; height: 400px;">
+        <img class="image" src='../../assets/images/Bali.png' alt="Random image" style="width: 324px; height: 400px;"> -->
     </div>
 </div>
 <!-- <div class="deals-container">

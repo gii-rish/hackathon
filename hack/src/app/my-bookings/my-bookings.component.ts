@@ -43,25 +43,23 @@ export class MyBookingsComponent implements OnInit {
         },
         {
             "id": 2,
-            "name": "Athens Mykonos Santorini Crete Package",
-            "stay": "Crete (2N) > Santorini (3N)",
+            "name": "A Fascinating Maldives Tour Package to Cocogiri Island Resort",
+            "stay": "",
             "offerings": [
-                "leisure",
-                "Attraction"
+                "Leisure"
             ],
             "activities": [
-                "Visit Museum of Prehistoric Thera",
-                "Visit Santorini Arts Factory",
-                "Visit Black Beach"
+                "Dine in the luxury of your private infinity pool with your loved one",
+                "Relax and rejuvenate in the unspoilt beaches of the Indian Ocean"
             ],
             "inclusions": [
                 {"act": "Hotel", "status": "check"},
-                {"act": "6 activities", "status": "check"},
-                {"act": "Flights", "status": "x"},
-                {"act": "Transfers", "status": "check"}
+                {"act": "2 activities", "status": "check"},
+                {"act": "Transfers", "status": "check"},
+                {"act": "Flights", "status": "x"}
             ],
-            "price": "81,568",
-            "image": "crete.png"
+            "price": "82,117",
+            "image": "maledives2.png"
         },
         {
             "id": 3,
@@ -154,6 +152,28 @@ export class MyBookingsComponent implements OnInit {
         ],
         "price": "1,45,567",
         "image": "europe3.png"
+      },
+      {
+        "id": 7,
+        "name": "A Lovely 6 nights to Hanoi and Ho Chi Minh for 5 days",
+        "stay": "Hanoi (3N) > Ho Chi Minh (3N)",
+        "offerings": [
+            "Attraction",
+            "Leisure"
+        ],
+        "activities": [
+            "Half-day City Tour of Hanoi including Water Puppet show with Private transfers ",
+            "Cu Chi Tunnels and Saigon City tour Full Day with Lunch"
+        ],
+        "inclusions": [
+            {"act": "Hotel", "status": "check"},
+            {"act": "2 activities", "status": "check"},
+            {"act": "Visa fees", "status": "check"},
+            {"act": "Transfers", "status": "check"},
+            {"act": "Flights", "status": "x"}
+        ],
+        "price": "41,541",
+        "image": "vietnam3.png"
       }
     ]
 
